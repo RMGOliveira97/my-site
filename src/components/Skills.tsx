@@ -3,7 +3,31 @@ import { motion } from "framer-motion";
 import React from "react";
 import Skill from "./Skill";
 
+interface Skills {
+  name: string;
+  time: string;
+}
+
 type Props = {};
+
+const skills: Skills[] = [
+  {
+    name:"JavaScript",
+    time: "1 year",
+  },
+  {
+    name:"TypeScript",
+    time: "6 months",
+  },
+  {
+    name:"React.js",
+    time: "6 months",
+  },
+  {
+    name:"Next.js",
+    time: "6 months",
+  }
+];
 
 export default function Skills({}: Props) {
   return (
