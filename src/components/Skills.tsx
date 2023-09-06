@@ -2,31 +2,73 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Skill from "./Skill";
-
-interface Skills {
-  name: string;
-  time: string;
-}
+import { DiNodejs } from "react-icons/di";
+import {
+  TbBrandHtml5,
+  TbBrandCss3,
+  TbBrandJavascript,
+  TbBrandTypescript,
+  TbBrandReact,
+  TbBrandReactNative,
+  TbBrandNextjs,
+  TbBrandGithubFilled,
+  TbBrandMongodb,
+} from "react-icons/tb";
+import { Skills } from "@/interfaces";
 
 type Props = {};
 
 const skills: Skills[] = [
   {
-    name:"JavaScript",
+    image: <TbBrandHtml5 className="icons"/>,
+    name: "HTML",
     time: "1 year",
   },
   {
-    name:"TypeScript",
-    time: "6 months",
+    image: <TbBrandCss3 className="icons"/>,
+    name: "CSS",
+    time: "1 year",
   },
   {
-    name:"React.js",
-    time: "6 months",
+    image: <TbBrandJavascript className="icons"/>,
+    name: "JavaScript",
+    time: "1 year",
   },
   {
-    name:"Next.js",
-    time: "6 months",
-  }
+    image: <TbBrandTypescript className="icons"/>,
+    name: "TypeScript",
+    time: "9 months",
+  },
+  {
+    image: <TbBrandReact className="icons"/>,
+    name: "React.js",
+    time: "9 months",
+  },
+  {
+    image: <TbBrandReactNative className="icons"/>,
+    name: "React Native",
+    time: "3 months",
+  },
+  {
+    image: <TbBrandNextjs className="icons"/>,
+    name: "Next.js",
+    time: "3 months",
+  },
+  {
+    image: <TbBrandGithubFilled className="icons"/>,
+    name: "Git",
+    time: "9 months",
+  },
+  {
+    image: <TbBrandMongodb className="icons"/>,
+    name: "MongoDb",
+    time: "3 months",
+  },
+  {
+    image: <DiNodejs className="icons"/>,
+    name: "NodeJs",
+    time: "3 months",
+  },
 ];
 
 export default function Skills({}: Props) {
@@ -45,7 +87,9 @@ export default function Skills({}: Props) {
         Hover over a skills for current proficiency
       </h3>
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
+        {skills.map((skill) => (
+          <Skill skills={skill} />
+        ))}
       </div>
     </motion.div>
   );

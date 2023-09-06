@@ -17,6 +17,8 @@ export default function ExperienceCard({ jobs }: Props) {
         <Image
           src={jobs.image}
           alt={jobs.company}
+          width={96}
+          height={96}
           className="w-24 h-24 rounded-full md:rounded-full xl:w-32 xl:h-32 object-cover object-center"
         />
       </motion.div>

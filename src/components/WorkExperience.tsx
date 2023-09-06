@@ -2,13 +2,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
-import logoFap from "../assets/logoFap.png";
-import logoBrico from "../assets/logoBrico.png";
 import { Job } from "../interfaces";
 
 const jobs: Job[] = [
   {
-    image: { logoFap },
+    image: "/logoFap.png",
     title: "Military Police",
     company: "Portuguese Air Force",
     time: "Nov 2018 - Present",
@@ -18,7 +16,7 @@ const jobs: Job[] = [
     ],
   },
   {
-    image: { logoBrico },
+    image: "/logoBrico.png",
     title: "Store Collaborator",
     company: "Brico Depot",
     time: "Jan 2017 - Jan 2018",
@@ -41,7 +39,7 @@ export default function WorkExperience() {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Experience
       </h3>
-      <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
+      <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {jobs.map((job) => (
           <ExperienceCard jobs={job} />
         ))}

@@ -3,8 +3,8 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
-import myPhoto from "../assets/MyPhoto.png";
 import Link from "next/link";
+import myPhoto from "../assets/MyPhoto.png";
 
 type Props = {};
 
