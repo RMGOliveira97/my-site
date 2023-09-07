@@ -1,16 +1,47 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+import { Projects } from "@/interfaces";
+import { DiNodejs } from "react-icons/di";
+import {
+  TbBrandCss3,
+  TbBrandTypescript,
+  TbBrandReact,
+  TbBrandReactNative,
+  TbBrandNextjs,
+  TbBrandGithubFilled,
+  TbBrandTailwind,
+} from "react-icons/tb";
 
 type Props = {};
 
 export default function Projects({}: Props) {
-  const projects = [
+  const projects: Projects[] = [
     {
-      link: "",
+      link: "https://github.com/RMGOliveira97/shopping-list",
       name: "Shoping List",
-      tech: ""
-    }
+      tech: [
+        <TbBrandCss3 className="project-icons" />,
+        <TbBrandReact className="project-icons" />,
+        <TbBrandGithubFilled className="project-icons" />,
+      ],
+      description:
+        "A simple shopping site with several products and the possibility to add them to the cart to make a final total, created with React and Sccs",
+    },
+    {
+      link: "https://github.com/RMGOliveira97/Project.React.NLW",
+      name: "Time Capsule",
+      tech: [
+        <TbBrandTypescript className="project-icons" />,
+        <TbBrandNextjs className="project-icons" />,
+        <TbBrandReactNative className="project-icons" />,
+        <TbBrandTailwind className="project-icons" />,
+        <DiNodejs className="project-icons" />,
+        <TbBrandGithubFilled className="project-icons" />,
+      ],
+      description:
+        "A website built to be a time capsule to save memories and be able to share them with others is built on three fronts: the web, mobile, and backend. With next. js, reactnative, nodejs, and tailwind.",
+    },
   ];
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
@@ -19,26 +50,8 @@ export default function Projects({}: Props) {
       </h3>
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {projects.map((project, index) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-            <motion.img
-              initial={{ y: -300, opacity: 0 }}
-              transition={{ duration: 1.2 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              src={project.link}
-              alt={project.name}
-            />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
-                {project.name}
-              </h4>
-
-              <p className="text-lg text-center md:text-left">
-               
-              </p>
-            </div>
-          </div>
+        {projects.map((project) => (
+          <ProjectCard project={project} />
         ))}
       </div>
 

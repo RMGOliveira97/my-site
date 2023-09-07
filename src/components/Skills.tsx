@@ -13,6 +13,7 @@ import {
   TbBrandNextjs,
   TbBrandGithubFilled,
   TbBrandMongodb,
+  TbBrandTailwind,
 } from "react-icons/tb";
 import { Skills } from "@/interfaces";
 
@@ -20,52 +21,57 @@ type Props = {};
 
 const skills: Skills[] = [
   {
-    image: <TbBrandHtml5 className="icons"/>,
+    image: <TbBrandHtml5 className="icons" />,
     name: "HTML",
     time: "1 year",
   },
   {
-    image: <TbBrandCss3 className="icons"/>,
+    image: <TbBrandCss3 className="icons" />,
     name: "CSS",
     time: "1 year",
   },
   {
-    image: <TbBrandJavascript className="icons"/>,
+    image: <TbBrandJavascript className="icons" />,
     name: "JavaScript",
     time: "1 year",
   },
   {
-    image: <TbBrandTypescript className="icons"/>,
+    image: <TbBrandTypescript className="icons" />,
     name: "TypeScript",
     time: "9 months",
   },
   {
-    image: <TbBrandReact className="icons"/>,
+    image: <TbBrandReact className="icons" />,
     name: "React.js",
     time: "9 months",
   },
   {
-    image: <TbBrandReactNative className="icons"/>,
+    image: <TbBrandReactNative className="icons" />,
     name: "React Native",
     time: "3 months",
   },
   {
-    image: <TbBrandNextjs className="icons"/>,
+    image: <TbBrandNextjs className="icons" />,
     name: "Next.js",
     time: "3 months",
   },
   {
-    image: <TbBrandGithubFilled className="icons"/>,
+    image: <TbBrandGithubFilled className="icons" />,
     name: "Git",
     time: "9 months",
   },
   {
-    image: <TbBrandMongodb className="icons"/>,
+    image: <TbBrandMongodb className="icons" />,
     name: "MongoDb",
     time: "3 months",
   },
   {
-    image: <DiNodejs className="icons"/>,
+    image: <TbBrandTailwind className="icons" />,
+    name: "Tailwindcss",
+    time: "3 months",
+  },
+  {
+    image: <DiNodejs className="icons" />,
     name: "NodeJs",
     time: "3 months",
   },
