@@ -9,7 +9,9 @@ export default function ProjectCard({ project }: Props) {
       <div className="space-y-10 px-0 md:px-10 max-w-6xl">
         <a href={project.link} target="_blank">
           <h4 className="text-4xl font-semibold text-center">{project.name}</h4>
-          <div className="flex space-x-2 my-2 items-center justify-center">{project.tech}</div>
+          <div className="flex space-x-2 my-2 items-center justify-center">
+            {project.tech}
+          </div>
 
           <p className="text-lg text-center md:text-left">
             {project.description}
